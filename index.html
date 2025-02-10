@@ -4,7 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preload" href="./assets/bootstrap/bootstrap.css" as="style" />
-    <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap/bootstrap.css"
+      media="print"
+      onload="this.media='all'"
+    />
 
     <link rel="preload" href="./assets/style.css" as="style" />
     <link rel="stylesheet" href="./assets/style.css" />
@@ -20,15 +25,30 @@
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- <link
+      rel="preload"
+      as="image"
+      href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
+      type="image/webp"
+    /> -->
     <meta charset="UTF-8" />
-    <script async src="./assets/bootstrap/bootstrap.bundle.js"></script>
+    <script src="./assets/bootstrap/bootstrap.bundle.js" defer></script>
     <script
-      async
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
+      defer
     ></script>
-    <script async src="./assets/maugallery.js"></script>
+
+    <!-- <link
+      rel="stylesheet"
+      href="style.css"
+      media="print"
+      onload="this.media='all'"
+    /> -->
+
+    <script src="./assets/maugallery.js" defer></script>
     <script async src="./assets/scripts.js"></script>
   </head>
   <body>
@@ -82,7 +102,6 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              loading="lazy"
               src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp"
               srcset="
                 ./assets/images/slider/ryoji1024.webp                        1024w,
@@ -95,7 +114,6 @@
           </div>
           <div class="carousel-item">
             <img
-              loading="lazy"
               src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash-1.webp"
               srcset="
                 ./assets/images/slider/nicholas1024.webp                          1024w,
@@ -108,7 +126,6 @@
           </div>
           <div class="carousel-item">
             <img
-              loading="lazy"
               src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp"
               srcset="
                 ./assets/images/slider/edward1024.webp                           1024w,
@@ -163,7 +180,7 @@
         </p>
       </div>
     </div>
-    <div id="gallery">
+    <section id="gallery">
       <h2 class="title">Portfolio</h2>
       <div class="container py-3">
         <div class="gallery" style="display: none">
@@ -214,7 +231,7 @@
           />
         </div>
       </div>
-      <div class="quote">
+      <aside class="quote">
         <figure>
           <blockquote>
             <p class="quote__text">
@@ -226,9 +243,9 @@
           </blockquote>
           <figcaption class="quote__author">- Richard Avedon</figcaption>
         </figure>
-      </div>
-    </div>
-    <div id="services">
+      </aside>
+    </section>
+    <section id="services">
       <h2 class="title">Mes services</h2>
       <div class="container">
         <div class="service">
@@ -272,8 +289,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="quote">
+    </section>
+    <aside class="quote">
       <figure>
         <blockquote>
           <p class="quote__text">
@@ -284,8 +301,8 @@
         </blockquote>
         <figcaption class="quote__author">- Richard Avedon</figcaption>
       </figure>
-    </div>
-    <div id="contact">
+    </aside>
+    <section id="contact">
       <div class="container">
         <div class="form-container">
           <h2>Une question ? Une demande de devis ?</h2>
@@ -311,6 +328,6 @@
           <img src="./assets/images/camera.png" />
         </div>
       </div>
-    </div>
+    </section>
   </body>
 </html>
